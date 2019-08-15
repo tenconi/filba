@@ -164,14 +164,14 @@ display: block;
 background:-;
 }
 .space{
-height:200px;
+height: 120px;
 max-width: auto;
 }
 
 #empresa{
 width:80%;
 margin: auto;
-padding-top: 150px;
+padding-top: 120px;
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
@@ -190,13 +190,45 @@ padding: 10px;
 }
 
 #proyectos{
-	width:80%;
-padding-top: 150px;
+width:80%;
+padding-top: 120px;
+margin: auto;
 }
 
 #servicios{
-	margin: auto;
-padding-top: 150px;
+width:80%;
+margin: auto;
+padding-top: 120px;
+display: flex;
+justify-content: space-between;
+}
+.servicios{
+width:50%;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.service01, .service02, .service03, .service04 {
+width:200px;
+height: 230px;
+background:#FFFFFF;
+box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2);
+margin: 0px 10px 20px 10px;
+}
+
+.ladrillos, .ladrillos_barro, .bloques, .ladrillos_huecos{
+margin:10px; 
+}
+
+span {
+display: block;
+margin:auto;
+font-family: 'Arial', helvetica, sans-serif;
+font-size: 11px;
+font-weight: 600;
+text-transform: uppercase;
+text-align: center;
 }
 
 #contacto{
