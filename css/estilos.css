@@ -133,6 +133,9 @@ margin:auto;
 display: block;
 margin:auto;
 }
+#home video controls {
+	color:red;
+}
 
 .titulo{
 font-family: 'Exo-bold', Arial, sans-serif;
@@ -140,21 +143,23 @@ font-size: 60px;
 color:#FFFFFF;
 text-align: center;
 text-transform: uppercase;
-text-shadow: 0px 0px 14px rgba(0,0,0,0.7);
+text-shadow: 2px 0px 14px #000000;
+margin-bottom: 30px;
 }
 .bajada{
 font-family: 'Exo-medium', Arial, sans-serif;
 font-size: 36px;
 color:#FFFFFF;
 text-align: center;
-text-shadow: 0px 0px 14px rgba(0,0,0,0.7);
+text-shadow: 0px 0px 10px #000000;
+margin-bottom: 25px;
 }
 .bold{
 font-family: 'Exo-semi', Arial, sans-serif;
 font-size: 36px;
 color:#FFFFFF;
 text-align: center;
-text-shadow: 0px 0px 14px rgba(0,0,0,0.7);
+text-shadow: 0px 0px 10px #000000;
 }
 .espacio{
 width:3em;
