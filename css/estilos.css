@@ -499,7 +499,29 @@ transition: 0.4s;
 		align-self: center;
 	}
 
-	footer{}
+	footer{
+		margin-top: 25px;
+	}
+
+	footer p {
+		font-size: 10px
+	}
+	.footernav >a{
+		width:25%;
+		text-align: center;
+		margin: 5px;
+	}
+	.footernav{
+		font-size: 12px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 5px;
+	}
+
+	.tenco{
+		height: 20px;
+	}
 }
 
 @media (max-width: 425px){}
