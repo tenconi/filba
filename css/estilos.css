@@ -45,6 +45,9 @@ position: fixed;
 .logo{
 align-self: flex-end;
 }
+.menu {
+	display: none;
+}
 .redes{
 width:150px;
 display: flex;
@@ -378,3 +381,125 @@ opacity: 0.65;
 opacity: 1;
 transition: 0.4s;
 }
+
+
+@media (max-width: 425px){
+	
+	header{
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		display: block;
+		position: relative;
+	}
+	header>a{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	
+	.logo{
+		height:70px;
+		margin:auto;
+	}
+	.menu {
+		display: block;
+		height: 70px;
+	}
+	nav{
+		display: none;
+	}
+
+	
+	.redes{
+		display: none
+	}
+	.home video {
+		display: none;
+	}
+
+	.space{
+		height:10px;
+	}
+	.espacio {
+		display: none;
+	}
+
+	#home, #empresa, #proyectos, #servicios, #contacto {
+		width:95%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		padding: 0px;
+	}
+
+	.cabecera{
+		width:100%;
+		display: flex;
+		flex-direction: column;
+	} 
+	.titulo{
+		font-size: 36px;
+		width:100%;
+	}
+	.bajada{
+		font-size: 24px;
+		width:100%;
+	}
+	.bold{
+		font-size: 24px;
+		width:100%;
+	}
+
+	p{
+		font-size: 16px;
+	}
+
+	.parrafo{
+		width:100%;
+		margin-top: 10px;
+	}
+
+	.servicios{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 15px;
+	}
+	[class^=service] {
+		width: 40%;
+		height: auto
+	}
+	
+	.ladrillos, .ladrillos_barro, .bloques, .ladrillos_huecos{
+		width:90%;
+		margin:5%;
+	}
+
+	span{
+		padding: 7px;
+	}
+
+	.formulario{
+		width:100%;
+	}
+
+	.formulario input{
+		margin:5px;
+	}
+
+	.formulario textarea{
+		margin:5px;
+	}
+	.formulario input:last-child{
+		font-size: 20px;
+		align-self: center;
+	}
+
+	footer{}
+}
+
+@media (max-width: 425px){}
