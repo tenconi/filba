@@ -26,6 +26,7 @@ body{
 width:100%;
 height:100%;
 background-image:url(../img/fondo.jpg);
+background-color: #000000;
 background-repeat: no-repeat;
 background-size: auto 100%;
 background-position: bottom right;
@@ -39,7 +40,7 @@ box-shadow: 0px 5px 3px rgba(0,0,0,0.5);
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
-justify-content: center;
+justify-content: space-around;
 position: fixed;
 z-index: 99
 }
@@ -125,7 +126,7 @@ border-bottom: 7px solid #A91F66;
 #home{
 width:80%;
 margin: auto;
-padding-top: 150px;
+padding-top: 120px;
 z-index: 0;
 }
 .home img{
@@ -177,7 +178,7 @@ max-width: auto;
 #empresa{
 width:80%;
 margin: auto;
-padding-top: 120px;
+padding-top: 100px;
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
@@ -197,14 +198,14 @@ padding: 10px;
 
 #proyectos{
 width:80%;
-padding-top: 120px;
+padding-top: 100px;
 margin: auto;
 }
 
 #servicios{
 width:80%;
 margin: auto;
-padding-top: 120px;
+padding-top: 100px;
 display: flex;
 justify-content: space-between;
 }
@@ -214,8 +215,9 @@ display: flex;
 justify-content: center;
 flex-wrap: wrap;
 }
-
-
+.servicios a{
+	text-decoration: none;
+}
 .service01, .service02, .service03, .service04{
 width:200px;
 height: 230px;
@@ -223,26 +225,86 @@ background:#FFFFFF;
 box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2);
 margin: 0px 10px 20px 10px;
 }
-
-.ladrillos, .ladrillos_barro, .bloques, .ladrillos_huecos{
+.ladrillos, .iluminacion, .paneles, .mantenimiento{
 margin:10px; 
 }
-
-
 span{
 display: block;
 margin:auto;
 font-family: 'Arial', helvetica, sans-serif;
 font-size: 11px;
+color:#333434;
 font-weight: 600;
 text-transform: uppercase;
 text-align: center;
+}
+.modal{
+	position: fixed;
+	top:0;
+	right: 0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.85);
+	display:none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.modal:target{
+	display: flex;
+}
+h2{
+	font-family: 'Exo-semi', arial, sans-serif;
+	font-size:30px;
+	color:#FFFFFF;
+}
+p{
+	font-size: 16px;
+}
+.descripcion{
+	color:#FFFFFF;
+	width:300px;
+	padding: 10px;
+	line-height: 20px;
+}
+.cuerpo_mod{
+	display: flex;
+	flex-direction: 
+}
+.modal>h2{
+	margin-bottom: 15px;
+}
+.modal a{
+	text-decoration: none;
+	font-family: arial, sans-serif;
+	color:#FFFFFF;
+	font-size: 30px;
+}
+.modal>a:last-child{
+	background-color: rgba(109,31,62,0.85);
+	width:30px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 100%;
+	font-size:24px;
+}
+.modal .service_pic img{
+	height:300px;
+	margin: 10px;
+	padding: 10px;
+	background-color:#FFFFFF;
+}
+.service_pic{
+	display: flex;
+	flex-direction: row;
+	align-items: center
 }
 
 #contacto{
 width:80%;
 margin:auto;
-padding-top: 150px;
+padding-top: 125px;
 display: flex;
 justify-content: space-between;
 }
