@@ -48,9 +48,19 @@ z-index: 99
 align-self: flex-end;
 height: 63px;
 }
+
+
+/* ~~~ MENÚ MóViL ~~~ */
+
+#menu_desp{}
+
 .menu {
 	display: none;
 }
+.desplegable{
+	display: none;
+}
+
 .redes{
 width:150px;
 display: flex;
@@ -498,6 +508,47 @@ transition: 0.4s;
 	.menu:hover{
 		opacity: 0.7;
 	}
+
+	#menu_desp{}
+
+	.menu {
+	display:-;
+	}
+	.desplegable{
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		top:45px;
+		right: 0px;
+		
+	}
+	.desplegable a{
+		height: 30px;
+		width:150px;
+		padding: 5px auto;
+		font-family: 'Exo-medium', arial, sans-serif;
+		font-size: 13px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color:#262626;
+		align-self: center;
+		align-items: center;
+		background-color: #FFFFFF;
+		border-bottom:3px solid #FFF;
+	}
+	.desplegable a:hover{
+		border-bottom: 3px solid #1889b7;
+		transition: 0.6s;
+	}
+	.desplegable a:active{
+		border-bottom: 3px solid #ab1e66;
+		transition: 0.6s;
+	}
+
+
+
 	nav{
 		display: none;
 	}
