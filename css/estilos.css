@@ -40,7 +40,7 @@ box-shadow: 0px 5px 3px rgba(0,0,0,0.5);
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
-justify-content: center;
+justify-content: space-around;
 position: fixed;
 z-index: 99
 }
@@ -57,9 +57,11 @@ height: 63px;
 .menu {
 	display: none;
 }
-.desplegable{
+#desplegable{
 	display: none;
 }
+
+/* ~~~ Se quitó ya que no hubo información al respecto
 
 .redes{
 width:150px;
@@ -92,6 +94,8 @@ height:30px;
 .redes a .face{
 	border-radius: 5px
 }
+*/
+
 nav{
 display: flex;
 flex-direction: row;
@@ -279,7 +283,6 @@ p{
 }
 .cuerpo_mod{
 	display: flex;
-	flex-direction: 
 }
 .modal>h2{
 	margin-bottom: 15px;
@@ -462,12 +465,16 @@ transition: 0.4s;
 }
 
 
-/* en 710px se apila el "header" */
+
 
 @media (max-width: 710px){
-
+	/* en 710px se apila el "header" */
 }
 
+
+@media (max-width: 768px){
+	/* ~~~ Creo que 768pc-max es mejor para tablets >>> Probaría hacerlo horizontal ~~~ */
+}
 
 @media (max-width: 425px){
 
@@ -501,6 +508,9 @@ transition: 0.4s;
 		margin-left: 10px;
 	}
 
+	
+	#menu_desp{}
+
 	.menu {
 		display: block;
 		height: 45px;
@@ -509,23 +519,23 @@ transition: 0.4s;
 		opacity: 0.7;
 	}
 
-	#menu_desp{}
-
-	.menu {
-	display:-;
-	}
-	.desplegable{
+	#desplegable{
 		position: absolute;
-		display: flex;
+		display: none;
 		flex-direction: column;
 		flex-wrap: wrap;
 		top:45px;
 		right: 0px;
-		
+		box-shadow: 0px 5px 3px rgba(0,0,0,0.4);
 	}
-	.desplegable a{
+	#desplegable:target {
+		display: flex;
+		transition: 0.8s;
+	}
+
+	#desplegable a{
 		height: 30px;
-		width:150px;
+		width:175px;
 		padding: 5px auto;
 		font-family: 'Exo-medium', arial, sans-serif;
 		font-size: 13px;
@@ -538,16 +548,20 @@ transition: 0.4s;
 		background-color: #FFFFFF;
 		border-bottom:3px solid #FFF;
 	}
-	.desplegable a:hover{
+	#desplegable {
+		border-radius: 0 0 0 10px;
+	}
+	#desplegable a:last-child {
+		border-radius: 0 0 0 10px;
+	}
+	#desplegable a:hover{
 		border-bottom: 3px solid #1889b7;
 		transition: 0.6s;
 	}
-	.desplegable a:active{
+	#desplegable a:active{
 		border-bottom: 3px solid #ab1e66;
 		transition: 0.6s;
 	}
-
-
 
 	nav{
 		display: none;
@@ -556,8 +570,14 @@ transition: 0.4s;
 	.redes{
 		display: none
 	}
+
+	#home{
+		width:100%;
+		padding-top: 150px;
+		display:none;
+	}
 	.home video {
-		display: none;
+		width:100%;
 	}
 
 	.space{
@@ -570,8 +590,7 @@ transition: 0.4s;
 	#empresa{
 		margin: 50px auto 0px auto;
 	}
-
-	#home, #empresa, #servicios, #contacto {
+	#empresa, #servicios, #contacto {
 		width:95%;
 		display: flex;
 		flex-direction: column;
@@ -587,6 +606,7 @@ transition: 0.4s;
 	.titulo{
 		font-size: 36px;
 		width:100%;
+		margin-top: 50px;
 	}
 	.bajada{
 		font-size: 22px;
@@ -597,7 +617,6 @@ transition: 0.4s;
 		width:100%;
 		margin-bottom: 20px;
 	}
-
 	.parrafo{
 		width:100%;
 		margin-top: 10px;
@@ -621,7 +640,6 @@ transition: 0.4s;
 		width:90%;
 		margin:5%;
 	}
-
 	span{
 		padding: 7px;
 	}
@@ -639,9 +657,8 @@ transition: 0.4s;
 		height:auto;
 		margin:0px;
 		align-self:center;
-		padding: 5px
+		padding: 5px;
 	}
-
 	.service_pic{
 		width:98%;
 		height: auto;
@@ -654,19 +671,13 @@ transition: 0.4s;
 		flex-direction: column;
 		width:90%;
 	}
-
-	.service_pic a:nth-child(2){
-		
-	}
-	
 	.descripcion{
 		width: 100%;
 		text-align: justify-all;
 	}
 	.service_pic .descripcion p{
-		font-size: 15px}
-
-
+		font-size: 15px;
+	}
 
 
 	.formulario{
@@ -681,13 +692,13 @@ transition: 0.4s;
 		margin:5px;
 	}
 	.formulario input:last-child{
-		font-size: 20px;
+		font-size: 16px;
+		text-transform: uppercase;
 		align-self: center;
 		margin-top: 20px;
 	}
 
 	footer{
-		margin-top: 10px;
 		height: auto;
 		padding-top: 10px;
 	}
