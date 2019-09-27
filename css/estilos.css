@@ -136,7 +136,7 @@ nav ul li a:active{
 border-bottom: 7px solid #A91F66;
 }
 
-
+/*
 #home{
 width:80%;
 margin: auto;
@@ -154,7 +154,11 @@ margin:auto;
 #home video controls {
 	color:red;
 }
+*/
 
+.cabecera{
+width:40%;
+}
 .titulo{
 font-family: 'Exo-bold', Arial, sans-serif;
 font-size: 60px;
@@ -199,25 +203,23 @@ display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
 }
-.cabecera{
-width:50%;
-}
+
 .parrafo{
 color:#FFFFFF;
 font-family: 'Arial', helvetica, sans-serif;
 font-size: 18px;
-width:50%;
+width:60%;
 text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
 background:rgba(0,0,0,0.2);
 padding: 10px;
 }
-
+/*
 #proyectos{
 width:80%;
 padding-top: 100px;
 margin: auto;
 }
-
+*/
 #servicios{
 width:80%;
 margin: auto;
@@ -226,14 +228,45 @@ display: flex;
 justify-content: space-between;
 }
 
-.servicios{width:50%;}
-.mini-gallery{
+.servicios{
+	width:60%;
+}
+.servicios .bold{margin-bottom: 10px;}
+.mini-gallery1, .mini-gallery2, .mini-gallery3{
 	display: flex;
 	flex-direction: row;
-	w
+	justify-content: center;
+	flex-wrap: wrap;
 }
-.mini-gallery img{
-	width:20%;
+.mini-gallery1 a, .mini-gallery2 a{
+	width:30%;
+	height: auto;
+	margin: 8px;
+
+}
+
+.mini-gallery1 img, .mini-gallery2 img, .mini-gallery3 img{
+	width:100%;
+	padding: 0.4vw;
+	background-color: #FFFFFF;
+}
+.mini-gallery2 img, .mini-gallery3 img{
+	width:100%;
+	padding: 0.4vw;
+	background-color: #FFFFFF;
+}
+.mini-gallery3 img,{
+	width:100%;
+	padding: 0.4vw;
+	background-color: #FFFFFF;
+}
+
+.mini-gallery3 a{width:100%;}
+
+.span-gral{
+	font-family: 'Arial', helvetica, sans-serif;
+	font-size: 16px;
+	margin: 15px auto 50px;
 }
 
 /* corresponde a SERVICIOS Master
@@ -339,7 +372,7 @@ justify-content: space-between;
 
 /* ↓↓↓↓↓ FORMULARIO ↓↓↓↓↓*/
 .formulario{
-width:50%;
+width:60%;
 background: -;
 display: flex;
 flex-direction: column;
