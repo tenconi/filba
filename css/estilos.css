@@ -161,7 +161,7 @@ width:40%;
 }
 .titulo{
 font-family: 'Exo-bold', Arial, sans-serif;
-font-size: 60px;
+font-size: 50px;
 color:#FFFFFF;
 text-align: center;
 text-transform: uppercase;
@@ -170,7 +170,7 @@ margin-bottom: 30px;
 }
 .bajada{
 font-family: 'Exo-medium', Arial, sans-serif;
-font-size: 36px;
+font-size: 32px;
 color:#FFFFFF;
 text-align: center;
 text-shadow: 0px 0px 10px #000000;
@@ -178,7 +178,7 @@ margin-bottom: 25px;
 }
 .bold{
 font-family: 'Exo-semi', Arial, sans-serif;
-font-size: 36px;
+font-size: 33px;
 color:#FFFFFF;
 text-align: center;
 text-shadow: 0px 0px 10px #000000;
@@ -231,7 +231,9 @@ justify-content: space-between;
 .servicios{
 	width:60%;
 }
-.servicios .bold{margin-bottom: 10px;}
+.servicios .bold{
+	margin-bottom: 10px;
+}
 .mini-gallery1, .mini-gallery2, .mini-gallery3{
 	display: flex;
 	flex-direction: row;
@@ -239,9 +241,9 @@ justify-content: space-between;
 	flex-wrap: wrap;
 }
 .mini-gallery1 a, .mini-gallery2 a{
-	width:30%;
+	width:22%;
 	height: auto;
-	margin: 8px;
+	margin: 1%;
 
 }
 
@@ -260,14 +262,49 @@ justify-content: space-between;
 	padding: 0.4vw;
 	background-color: #FFFFFF;
 }
-
-.mini-gallery3 a{width:100%;}
-
+.mini-gallery3 a{
+	width:100%;
+}
 .span-gral{
 	font-family: 'Arial', helvetica, sans-serif;
 	font-size: 16px;
+	color: #282828;
 	margin: 15px auto 50px;
 }
+
+.modal{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color: rgba(40,40,40,0.8);
+	z-index: 100
+}
+.modal>h2{
+	color:#FFFFFF;
+	font-family: 'Exo-medium', arial, sans-serif;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5); }
+
+.modal a{
+	font-family: verdana;
+	color:#FFFFFF;
+	text-decoration: none;
+	font-size: 40px;
+}
+.modal>a:last-child{
+	background-color: #a91f66;
+	font-size: 30px;
+	line-height: 45px;
+	display: block;
+	height:45px;
+	width:45px;
+
+	text-align: center;
+	border-radius: 100%
+}
+.service-pic{}
+.img-modal{}
 
 /* corresponde a SERVICIOS Master
 .servicios{
@@ -670,6 +707,8 @@ transition: 0.4s;
 		font-size: 16px;
 	}
 
+	/*
+
 	.servicios{
 		width: 100%;
 		display: flex;
@@ -725,7 +764,9 @@ transition: 0.4s;
 	.service_pic .descripcion p{
 		font-size: 15px;
 	}
+	
 
+	*/
 
 	.formulario{
 		width:100%;
