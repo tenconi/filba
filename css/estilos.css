@@ -29,12 +29,12 @@ background-image:url(../img/fondo-filba.jpg);
 background-color: #000000;
 background-repeat: no-repeat;
 background-size: cover;
-background-position: bottom right;
+background-position: center;
 background-attachment: fixed;
 }
 header{
 width:100%;
-height: auto;/*63px*/
+height: auto;/*50px*/
 background:#FFFFFF;
 box-shadow: 0px 5px 3px rgba(0,0,0,0.5);
 display: flex;
@@ -42,11 +42,16 @@ flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-around;
 position: fixed;
-z-index: 99
+z-index: 100;
+margin: 0px;
 }
 .logo{
-align-self: flex-end;
-height: 63px;
+align-self: top;
+height: 50px;
+margin:0px;
+}
+header>a{
+	border-bottom: none;
 }
 
 
@@ -61,7 +66,6 @@ height: 63px;
 	display: none;
 }
 
-/* ~~~ Se quitó ya que no hubo información al respecto
 
 .redes{
 width:150px;
@@ -94,7 +98,7 @@ height:30px;
 .redes a .face{
 	border-radius: 5px
 }
-*/
+
 
 nav{
 display: flex;
@@ -107,6 +111,7 @@ list-style: none;
 display: flex;
 flex-wrap: nowrap;
 flex-direction: row;
+justify-content: flex-end;
 }
 nav ul li{
 display: flex;
@@ -115,12 +120,13 @@ align-self: center;
 }
 nav ul li a{
 width:170px;
-height:63px;
+height:50px;
 border-bottom: 7px solid #FFFFFF;
 text-align: center;
 font-style: none;
 text-decoration: none;
-font-family: 'Exo-medium', Arial, sans-serif;
+font-family: /*'Exo-medium',*/ 'Arial', helvetica, sans-serif;
+font-size: 12px;
 text-transform: uppercase;
 color:#636464;
 display: flex;
@@ -129,11 +135,29 @@ align-items: center;
 }
 nav ul li a:hover{
 border-bottom: 7px solid #1588B6;
-transition: 0.45s;
-font-family: 'Exo-bold';
+transition: all 0.45s;
 }
 nav ul li a:active{
 border-bottom: 7px solid #A91F66;
+}
+.submenu{
+	display:none;
+	flex-direction: column;
+	position: absolute;
+	margin-top: 54px;
+	background-color: #FFFFFF;
+	z-index: 0;
+	box-shadow: 0px 5px 3px rgba(0,0,0,0.5);
+}
+ul>li>a{
+	cursor: pointer;
+}
+nav ul li:hover>.submenu{
+	display:flex;
+	transition: 0.45s;
+}
+nav ul li:active>.submenu{
+	border-bottom: 4px solid #A91F66;
 }
 
 /*
@@ -161,7 +185,7 @@ width:40%;
 }
 .titulo{
 font-family: 'Exo-bold', Arial, sans-serif;
-font-size: 50px;
+font-size: 45px;
 color:#FFFFFF;
 text-align: center;
 text-transform: uppercase;
@@ -281,16 +305,29 @@ justify-content: space-between;
 	background-color: rgba(40,40,40,0.8);
 	z-index: 100
 }
+.modal{
+	display:none;
+}
+.modal:target{display: block;}
 .modal>h2{
 	color:#FFFFFF;
 	font-family: 'Exo-medium', arial, sans-serif;
-	text-shadow: 0 0 10px rgba(0,0,0,0.5); }
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	margin: 15px auto 25px;
+}
 
 .modal a{
 	font-family: verdana;
 	color:#FFFFFF;
 	text-decoration: none;
-	font-size: 40px;
+	font-size: 48px;
+	display:flex;
+	flex-direction: column;
+	text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.modal a:nth-child(1), .modal a:nth-child(3){
+	margin:10px;
 }
 .modal>a:last-child{
 	background-color: #a91f66;
@@ -299,12 +336,26 @@ justify-content: space-between;
 	display: block;
 	height:45px;
 	width:45px;
-
 	text-align: center;
-	border-radius: 100%
+	border-radius: 100%;
+	margin: auto;
+	margin-top: 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
-.service-pic{}
-.img-modal{}
+.service-pic{
+	display: flex; 
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.service-pic img{
+	padding: 0.4vw;
+	background-color: #FFFFFF;
+	width:100%;
+}
+.img-modal{
+	width:400px;
+}
 
 /* corresponde a SERVICIOS Master
 .servicios{
@@ -563,14 +614,6 @@ transition: 0.4s;
 @media (max-width: 425px){
 
 	body{
-		width:100%;
-		height:100%;
-		background-image:url(../img/fondomovil.jpg);
-		background-repeat: no-repeat;
-		background-size: auto;/*ancho y alto*/
-		background-position: top right;
-		background-attachment: fixed;
-		background-color: #000000;
 	}
 	
 	header{
@@ -580,6 +623,7 @@ transition: 0.4s;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		position: fixed;
+		top:0;
 	}
 
 	header>a{
@@ -654,7 +698,7 @@ transition: 0.4s;
 	.redes{
 		display: none
 	}
-
+/*
 	#home{
 		width:100%;
 		padding-top: 150px;
@@ -663,7 +707,7 @@ transition: 0.4s;
 	.home video {
 		width:100%;
 	}
-
+*/
 	.space{
 		height:50px;
 	}
@@ -707,8 +751,13 @@ transition: 0.4s;
 		font-size: 16px;
 	}
 
-	/*
+	#servicios{}
+	.servicios{width:100%}
+	.servicios>.bold{}
+	.mini-gallery1, .mini-gallery2, .mini-gallery3{
+		}
 
+	/*
 	.servicios{
 		width: 100%;
 		display: flex;
